@@ -12,13 +12,16 @@
   box-sizing: border-box;
 }
 
-
 main {
   flex: 1;
 }
 
-/* header section */
 
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* header section */
 
 .header {
   position: fixed;
@@ -99,22 +102,6 @@ main {
   margin-bottom: 2rem;
 }
 
-.hero button {
-  background-color: #3d787e;
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
-  font-size: 1.5rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.5s, transform 0.5s;
-}
-
-.hero button:hover {
-  background-color: #1d3769;
-  transform: scale(1.05);
-}
-
 .about-us-container {
   padding: 2rem;
   display: flex;
@@ -134,7 +121,7 @@ main {
   padding: 1rem;
   margin-left: 8rem;
   margin-right: 8rem;
-  border-bottom: #1d3769 5px solid;
+  border-bottom: #646464 2px solid;
 }
 
 .about-us-2 {
@@ -153,7 +140,7 @@ main {
 .about-us-2 img {
   grid-area: img;
   width: 100%;
-  max-width: 300px;
+  max-width: 250px;
   border-radius: 10px;
 }
 
@@ -171,58 +158,75 @@ main {
   font-size: 1.2rem;
   text-align: center;
   line-height: 1.5;
-  margin-top: -2rem;}
+  margin-top: -2rem;
+}
 
+.services-preview {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  text-align: center;
+}
 
+.services-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
 
+.service-card-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "img img h3 h3 h3 ."
+    "img img p p p ."
+    "img img . . . button";
+  gap: 32px;
+  width: 70%;
+  padding: 2rem;
+  border-bottom: #606565 2px solid;
+}
 
+.service-card-grid img {
+  grid-area: img;
+  width: 100%;
+  max-width: 125px;
+  border-radius: 10px;
+}
 
+.service-card-grid h3 {
+  grid-area: h3;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
 
+.service-card-grid p {
+  grid-area: p;
+  font-size: 1rem;
+  color: white;
+  margin: 0;
+  word-wrap: break-word;
+}
 
+.service-card-grid button {
+  grid-area: button;
+}
 
+/*section layouts*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.section-layout {
+  padding: 4rem 2rem;
+  min-height: 70vh;
+}
 
 
 /* footer Section */
-
 
 .footer {
   background-color: #3d787e;
